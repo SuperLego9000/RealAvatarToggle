@@ -35,7 +35,7 @@ class ParamWidget(ctk.CTkFrame):
             self.inputObject=ctk.CTkSlider(self,from_=settings[1][0],to=settings[1][1],number_of_steps=settings[1][2]*settings[1][1],command=self._update)
             self._update(round((settings[1][0]+settings[1][1])/2)*1.0)
         elif style=="toggle":
-            self.inputObject=ctk.CTkCheckBox(self,text='',offvalue=False,onvalue=True,command=lambda:self._update(inputObject.get()))
+            self.inputObject=ctk.CTkCheckBox(self,text='',offvalue=False,onvalue=True,command=lambda:self._update(self.inputObject.get()))
             self._update(False)
         else:raise ValueError(paramTypeName)
         

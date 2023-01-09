@@ -1,0 +1,6 @@
+__pycache__
+.vscode
+build.bat
+main.spec
+build
+dist
